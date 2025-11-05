@@ -19,8 +19,16 @@
   <body>
     <div id="app"></div>
     <div id="message">
-      <li v-for="shape in listOfShapes" :key="shape">{{ shape }}</li>
-      <div v-if="showOriginalMessage" v-bind:class="vueAppClass">{{message}}</div>
+      <input type="text" v-model="inputText" />
+      <p v-bind:style="{ backgroundColor: 'lightblue' }">Input Text: {{inputText}}</p>
+      <li
+        v-bind:style="{ backgroundColor: 'lightyellow' }"
+        v-for="shape in listOfShapes"
+        :key="shape"
+      >
+        {{shape}}
+      </li>
+      <div v-if="showOriginalMessage" v-bind:class="vueAppClass">{{textMessage}}</div>
       <div v-else>{{errorMessage}}</div>
     </div>
     <script type="module" src="/src/main.ts"></script>
