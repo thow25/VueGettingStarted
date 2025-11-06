@@ -35,6 +35,7 @@ const message = Vue.createApp({
   //     return this.inputText
   //   },
   // },
+  // Test change lol
 })
 
 message.mount('#message')
